@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Deployment (WIP)
+
+##### Deploy without container
+- [Step by step guide to deploy 🅰ngular app to Google App Engine](https://dev.to/askudhay/step-by-step-guide-to-deploy-ngular-app-to-google-app-engine-46hl)
+
+##### Containerized deployment
+- [App Engine deployment with Angular, Nginx, Docker, and Cloud Build
+](https://cloud.google.com/community/tutorials/appengine-angular-nginx-docker)
