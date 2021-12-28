@@ -8,5 +8,5 @@ import {environment} from '../environments/environment';
 })
 export class AppComponent {
   title = 'tkd-belt-client';
-  webapiurl = environment.webapiurl;
+  // webapiurl = environment.webapiurl;
 }

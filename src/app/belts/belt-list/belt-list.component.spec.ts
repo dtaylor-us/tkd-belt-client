@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatSliderComponent } from './mat-slider.component';
+import { BeltListComponent } from './belt-list.component';
 
-describe('MatSliderComponent', () => {
-  let component: MatSliderComponent;
-  let fixture: ComponentFixture<MatSliderComponent>;
+describe('BeltListComponent', () => {
+  let component: BeltListComponent;
+  let fixture: ComponentFixture<BeltListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MatSliderComponent ]
+      declarations: [ BeltListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MatSliderComponent);
+    fixture = TestBed.createComponent(BeltListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
