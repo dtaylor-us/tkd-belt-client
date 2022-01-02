@@ -1,7 +1,0 @@
-runtime: custom
-env: flex
-service: angular-ui-dev
-threadsafe: true
-
-env_variables:
-  API_URL: "https://webapi-dev.tkd-belt-client.com"
