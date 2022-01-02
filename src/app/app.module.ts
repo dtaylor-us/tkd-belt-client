@@ -6,18 +6,22 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MainNavComponent} from './main-nav/main-nav.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {BeltListComponent} from './belts/belt-list/belt-list.component';
+import { BeltThumbailComponent } from './belts/belt-thumbail/belt-thumbail.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
-    BeltListComponent
+    BeltListComponent,
+    BeltThumbailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
