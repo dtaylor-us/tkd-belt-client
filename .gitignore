@@ -47,3 +47,4 @@ Thumbs.db
 /nginx-hosting/dist/
 /nginx-hosting/
 /app.yaml
+/.env
