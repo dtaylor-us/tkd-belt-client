@@ -8,13 +8,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {BeltListComponent} from './belts/belt-list/belt-list.component';
 import { BeltThumbailComponent } from './belts/belt-thumbail/belt-thumbail.component';
 import {MatCardModule} from '@angular/material/card';
+import { BeltColorDirective } from './belts/belt-thumbail/belt-color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     BeltListComponent,
-    BeltThumbailComponent
+    BeltThumbailComponent,
+    BeltColorDirective
   ],
   imports: [
     BrowserModule,
