@@ -30,7 +30,7 @@ const BELTS: IBelt[] = [
     level: "Beginner",
     description: "means that a student is pure or without knowledge or the control of the  mind over the body which is basic to Taekwondo.",
     breaking: ["Hammer Fist"],
-    kicks: ["Front Kick, Round Kick"],
+    kicks: ["Front Kick", "Round Kick"],
     forms: ["Ki Bon Dong Jak"]
   },
   {

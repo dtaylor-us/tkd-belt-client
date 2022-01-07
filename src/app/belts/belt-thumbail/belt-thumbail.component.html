@@ -1,3 +1,23 @@
 <mat-card appBeltColor [color]="belt.color" class="mt2 mb2">
-  <h2 class="black">{{belt.name}}</h2>
+  <span></span>
+  <h1 class="black pointer pl3" (click)="toggleDetails()">{{belt.name}}</h1>
+  <!--  <div *ngFor="let belt of belts">-->
+  <!--    <app-belt-thumbail [belt]="belt"></app-belt-thumbail>-->
+  <!--  </div>-->
+  <div *ngIf="visible">
+    <h2 class="black pl3">Level: {{belt.level}}</h2>
+    <div class="flex justify-between">
+    <span class="w-33">
+      <app-belt-list-details [details]="belt.breaking" [title]="'Breaking'"></app-belt-list-details>
+    </span>
+      <span class="w-33">
+      <app-belt-list-details [details]="belt.forms" [title]="'Forms'"></app-belt-list-details>
+    </span>
+      <span class="w-33">
+      <app-belt-list-details [details]="belt.kicks" [title]="'Kicks'"></app-belt-list-details>
+    </span>
+    </div>
+  </div>
+
+
 </mat-card>

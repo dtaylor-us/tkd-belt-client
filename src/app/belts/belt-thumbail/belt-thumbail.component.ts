@@ -7,8 +7,9 @@ import {IBelt} from '../belt.model';
   styleUrls: ['./belt-thumbail.component.css']
 })
 export class BeltThumbailComponent implements OnInit {
-  // @ts-ignore
+
   @Input() belt: IBelt;
+  visible = false;
 
   constructor() {
   }
@@ -16,4 +17,7 @@ export class BeltThumbailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleDetails() {
+    this.visible = !this.visible;
+  }
 }

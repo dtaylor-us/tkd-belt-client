@@ -9,6 +9,8 @@ import {BeltListComponent} from './belts/belt-list/belt-list.component';
 import { BeltThumbailComponent } from './belts/belt-thumbail/belt-thumbail.component';
 import {MatCardModule} from '@angular/material/card';
 import { BeltColorDirective } from './belts/belt-thumbail/belt-color.directive';
+import {MatListModule} from '@angular/material/list';
+import { BeltListDetailsComponent } from './belts/belt-list/belt-list-details/belt-list-details.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +18,16 @@ import { BeltColorDirective } from './belts/belt-thumbail/belt-color.directive';
     MainNavComponent,
     BeltListComponent,
     BeltThumbailComponent,
-    BeltColorDirective
+    BeltColorDirective,
+    BeltListDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
