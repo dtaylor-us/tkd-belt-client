@@ -1,16 +1,26 @@
-<mat-card appBeltColor [color]="belt.color" class="mt2 mb2">
-  <span></span>
-  <h1 class="black pointer pl3" (click)="toggleDetails()">{{belt.name}}</h1>
-  <!--  <div *ngFor="let belt of belts">-->
-  <!--    <app-belt-thumbail [belt]="belt"></app-belt-thumbail>-->
-  <!--  </div>-->
-  <div *ngIf="visible">
-    <h2 class="black pl3">Level: {{belt.level}}</h2>
-    <div class="flex justify-between">
-    <span class="w-33">
+<mat-card appBeltColor [stripe]="belt.stripe ? belt.stripe : ''" [color]="belt.color" class="mv3">
+  <div class="flex justify-between pointer center" (click)="toggleDetails()">
+    <h1 class="black pl3 belt-name">{{belt.name}}</h1>
+
+    <mat-icon *ngIf="!visible" [ngStyle]="{'color':'black', 'padding-right':'1em'}"
+              aria-hidden="false"
+              aria-label="view details">visibility
+    </mat-icon>
+    <mat-icon *ngIf="visible" [ngStyle]="{'color':'black', 'padding-right':'1em'}"
+              aria-hidden="false"
+              aria-label="view details">visibility_off
+    </mat-icon>
+
+  </div>
+  <h3 class="black pl3 mb0 belt-level">{{belt.level}}</h3>
+
+  <div class="mt3 black" *ngIf="visible">
+    <p class="pl3">{{belt.description}}</p>
+    <div class="flex justify-between mt3">
+    <span class="w-33 br">
       <app-belt-list-details [details]="belt.breaking" [title]="'Breaking'"></app-belt-list-details>
     </span>
-      <span class="w-33">
+      <span class="w-33 br">
       <app-belt-list-details [details]="belt.forms" [title]="'Forms'"></app-belt-list-details>
     </span>
       <span class="w-33">

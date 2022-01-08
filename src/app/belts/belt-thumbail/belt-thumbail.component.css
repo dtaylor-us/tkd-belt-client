@@ -1,1 +1,9 @@
 
+.belt-name {
+  margin-bottom: 0 !important;
+}
+
+.belt-level {
+  color: black;
+  font-weight: bold;
+}

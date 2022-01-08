@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import { BeltColorDirective } from './belts/belt-thumbail/belt-color.directive';
 import {MatListModule} from '@angular/material/list';
 import { BeltListDetailsComponent } from './belts/belt-list/belt-list-details/belt-list-details.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BeltListDetailsComponent } from './belts/belt-list/belt-list-details/be
     BrowserAnimationsModule,
     MatToolbarModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
