@@ -82,6 +82,7 @@ const BELTS: IBelt[] = [
     rank: 6,
     level: Rank.INTERMEDIATE.toString(),
     breaking: ["Back Kick"],
+    description: "Symbolizes the sky toward which the young plant is reaching.",
     kicks: ["Back Kick"],
     forms: ["Taegeuk Sa Jang"],
   },
@@ -114,6 +115,7 @@ const BELTS: IBelt[] = [
     level: Rank.ADVANCED.toString(),
     breaking: ["Spin Hook Kick"],
     kicks: ["Spin Hook Kick", "Inside Crescent"],
+    description: "Signifies the ripening of the plant. The student has good technical knowledge that can be dangerous since s/he will lack control and discipline.",
     forms: ["Taegeuk Chil Jang"],
     stripe: "white"
   },
