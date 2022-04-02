@@ -11,7 +11,7 @@ export interface IBelt {
   stripe?: string;
 }
 
-export enum Rank {
+export enum Level {
   BEGINNER = 'Beginner',
   INTERMEDIATE = 'Intermediate',
   ADVANCED = 'Advanced',
@@ -36,8 +36,9 @@ export const beltColorMap = new Map<string, string>([
   [BeltColor.ORANGE, "#ffaa41"],
   [BeltColor.GREEN, "#37dc37"],
   [BeltColor.PURPLE, "#cc5dcc"],
-  [BeltColor.BLUE, "#0597ff"],
+  [BeltColor.BLUE, "#0277e3"],
   [BeltColor.BROWN, "#d99058"],
   [BeltColor.RED, "#f94545"],
-  [BeltColor.BLACK, "#202020"]
+  [BeltColor.BLACK, "#202020"],
+  ["gold", "#D2B760"]
 ]);

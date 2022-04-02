@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {IBelt, Rank} from './belt.model';
+import {IBelt, Level} from './belt.model';
 import {Observable, Subject} from 'rxjs';
 
 @Injectable({
@@ -27,7 +27,7 @@ const BELTS: IBelt[] = [
     name: 'White Belt',
     color: 'white',
     rank: 0,
-    level: Rank.BEGINNER.toString(),
+    level: Level.BEGINNER.toString(),
     description: "Means that a student is pure or without knowledge or the control of the  mind over the body which is basic to Taekwondo.",
     breaking: ["Hammer Fist"],
     kicks: ["Front Kick", "Round Kick"],
@@ -38,7 +38,7 @@ const BELTS: IBelt[] = [
     name: '9th Keup Yellow',
     color: 'yellow',
     rank: 2,
-    level: Rank.BEGINNER.toString(),
+    level: Level.BEGINNER.toString(),
     description: "Symbolizes that the student, likened to a seed, is beginning to see the  sunlight",
     breaking: ["Axe Kick"],
     kicks: ["Side Kick", "Axe Kick"],
@@ -49,7 +49,7 @@ const BELTS: IBelt[] = [
     name: '8th Keup Orange',
     color: 'orange',
     rank: 3,
-    level: Rank.BEGINNER.toString(),
+    level: Level.BEGINNER.toString(),
     breaking: ["Hoping Side Kick"],
     kicks: ["Side Kick", "Axe Kick"],
     forms: ["Taegeuk Il Jang"],
@@ -59,7 +59,7 @@ const BELTS: IBelt[] = [
     name: '7th Keup Green',
     color: 'green',
     rank: 4,
-    level: Rank.BEGINNER.toString(),
+    level: Level.BEGINNER.toString(),
     description: "Represents the seed just beginning to grow.",
     breaking: ["Hoping Axe Kick"],
     kicks: ["Fast Axe Kick"],
@@ -70,7 +70,7 @@ const BELTS: IBelt[] = [
     name: '6th Keup Purple',
     color: 'purple',
     rank: 5,
-    level: Rank.INTERMEDIATE.toString(),
+    level: Level.INTERMEDIATE.toString(),
     breaking: ["Knife Hand Strike"],
     kicks: ["Fast Kick"],
     forms: ["Taegeuk Sam Jang"],
@@ -80,7 +80,7 @@ const BELTS: IBelt[] = [
     name: '5th Keup Blue',
     color: 'blue',
     rank: 6,
-    level: Rank.INTERMEDIATE.toString(),
+    level: Level.INTERMEDIATE.toString(),
     breaking: ["Back Kick"],
     description: "Symbolizes the sky toward which the young plant is reaching.",
     kicks: ["Back Kick"],
@@ -91,7 +91,7 @@ const BELTS: IBelt[] = [
     name: '4th Keup Blue',
     color: 'blue',
     rank: 7,
-    level: Rank.INTERMEDIATE.toString(),
+    level: Level.INTERMEDIATE.toString(),
     breaking: ["360 Back Kick"],
     kicks: ["360 Back Kick"],
     forms: ["Taegeuk Oh Jang"],
@@ -102,7 +102,7 @@ const BELTS: IBelt[] = [
     name: '3rd Keup Brown',
     color: 'brown',
     rank: 8,
-    level: Rank.ADVANCED.toString(),
+    level: Level.ADVANCED.toString(),
     breaking: ["360 Round Kick"],
     kicks: ["360 Round Kick"],
     forms: ["Taegeuk Yuk Jang"],
@@ -112,7 +112,7 @@ const BELTS: IBelt[] = [
     name: '2nd Keup Red',
     color: 'red',
     rank: 9,
-    level: Rank.ADVANCED.toString(),
+    level: Level.ADVANCED.toString(),
     breaking: ["Spin Hook Kick"],
     kicks: ["Spin Hook Kick", "Inside Crescent"],
     description: "Signifies the ripening of the plant. The student has good technical knowledge that can be dangerous since s/he will lack control and discipline.",
@@ -124,11 +124,33 @@ const BELTS: IBelt[] = [
     name: '1st Keup Red',
     color: 'red',
     rank: 10,
-    level: Rank.ADVANCED.toString(),
+    level: Level.ADVANCED.toString(),
     breaking: ["Jumping Back Kick", "One Hand Technique"],
     kicks: ["Jumping Back Kick"],
     forms: ["Taegeuk Pahl Jang"],
     stripe: "black"
+  },
+  {
+    id: 11,
+    name: 'Deputy Black Belt',
+    color: 'black',
+    rank: 10,
+    level: Level.BLACK_BELT.toString(),
+    breaking: ["Flying Side Kick", "Tornado Round Kick"],
+    kicks: ["Jumping Back Kick"],
+    forms: ["Koryo"]
+  },
+  {
+    id: 12,
+    name: '1st Degree Black Belt',
+    color: 'black',
+    rank: 10,
+    level: Level.BLACK_BELT.toString(),
+    breaking: ["Flying Side Kick", "Tornado Round Kick"],
+    kicks: ["Jumping Back Kick"],
+    forms: ["Koryo"],
+    stripe: "gold"
+
   },
 //  TODO INTERMEDIATE, ADVANCED AND BLACK BELT
 ];

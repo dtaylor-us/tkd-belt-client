@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IBelt} from '../belt.model';
+import {Level} from '../belt.model';
 
 @Component({
   selector: 'app-belt-thumbail',
@@ -19,5 +20,9 @@ export class BeltThumbailComponent implements OnInit {
 
   toggleDetails() {
     this.visible = !this.visible;
+  }
+
+  isColorBelt(rank: string) : boolean {
+    return rank !== Level.BLACK_BELT.toString()
   }
 }

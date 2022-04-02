@@ -1,30 +1,45 @@
 <mat-card appBeltColor [stripe]="belt.stripe ? belt.stripe : ''" [color]="belt.color" class="mv3">
   <div class="flex justify-between pointer center" (click)="toggleDetails()">
-    <h1 class="black pl3 belt-name">{{belt.name}}</h1>
+    <h1 [ngClass]="{'pl3': true, 'belt-name': true, 'black': isColorBelt(belt.level.toString())}">
+      {{belt.name}}
+    </h1>
 
-    <mat-icon *ngIf="!visible" [ngStyle]="{'color':'black', 'padding-right':'1em'}"
+    <mat-icon *ngIf="!visible"
+              [ngStyle]="{'padding-right':'1em'}"
+              [ngClass]="{'black': isColorBelt(belt.level.toString())}"
               aria-hidden="false"
               aria-label="view details">visibility
     </mat-icon>
-    <mat-icon *ngIf="visible" [ngStyle]="{'color':'black', 'padding-right':'1em'}"
+
+    <mat-icon *ngIf="visible" [ngStyle]="{'padding-right':'1em'}"
+              [ngClass]="{'black': isColorBelt(belt.level.toString())}"
               aria-hidden="false"
               aria-label="view details">visibility_off
     </mat-icon>
 
   </div>
-  <h3 class="pl3 belt-level">{{belt.level}}</h3>
+  <h3 [ngClass]="{'pl3': true, 'b': true, 'black': isColorBelt(belt.level.toString())}"
+      class="pl3 b">{{belt.level.replace("_", " ")}}</h3>
 
-  <div class="mt3 black" *ngIf="visible">
+  <div
+    [ngClass]="{'mt3': true, 'black': isColorBelt(belt.level.toString())}"
+    *ngIf="visible">
     <p class="pl3">{{belt.description}}</p>
     <div class="flex justify-between mt3">
     <span class="w-33 br">
-      <app-belt-list-details [details]="belt.breaking" [title]="'Breaking'"></app-belt-list-details>
+      <app-belt-list-details
+        [isColorBelt]="isColorBelt(belt.level.toString())"
+        [details]="belt.breaking" [title]="'Breaking'"></app-belt-list-details>
     </span>
       <span class="w-33 br">
-      <app-belt-list-details [details]="belt.forms" [title]="'Forms'"></app-belt-list-details>
+      <app-belt-list-details
+        [isColorBelt]="isColorBelt(belt.level.toString())"
+        [details]="belt.forms" [title]="'Forms'"></app-belt-list-details>
     </span>
       <span class="w-33">
-      <app-belt-list-details [details]="belt.kicks" [title]="'Kicks'"></app-belt-list-details>
+      <app-belt-list-details
+        [isColorBelt]="isColorBelt(belt.level.toString())"
+        [details]="belt.kicks" [title]="'Kicks'"></app-belt-list-details>
     </span>
     </div>
   </div>
