@@ -23,6 +23,6 @@ export class BeltThumbailComponent implements OnInit {
   }
 
   isColorBelt(rank: string) : boolean {
-    return rank !== Level.BLACK_BELT.toString()
+    return rank !== Level.BLACK_BELT.toString().replace("_", " ")
   }
 }

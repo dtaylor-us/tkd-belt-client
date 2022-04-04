@@ -1,22 +1,19 @@
 import {Injectable} from '@angular/core';
 import {IBelt, Level} from './belt.model';
-import {Observable, Subject} from 'rxjs';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BeltService {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   getBelts(): Observable<IBelt[]> {
-    const subject = new Subject<IBelt[]>();
-    setTimeout(() => {
-      subject.next(BELTS);
-      subject.complete();
-    }, 100);
-    return subject;
+    return this.http.get<IBelt[]>(environment.beltApiUrl)
   }
 }
 
